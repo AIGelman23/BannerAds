@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="ad.size" content="width=728,height=90"> <!-- Meta Name for Google Ad Manager -->
+    <!-- JavaScript clickTag Destination -->
+    <script type="text/javascript"> 
+      var clickTag = "https://mypace.pacebus.com/"; 
+    </script>
+    <!-- End -->
+
+<!-- Banner Styles Begin --> 
+<style>
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFF;
+}
+
+#banner {
+  position:relative;
+  width:728px;
+  height:90px;
+  background-color: #efefef; 
+ overflow: hidden;
+}
+
+.panel {
+  position:absolute;
+  width:728px;
+  height:90px;
+ overflow: hidden;
+ 
+}
+
+#panel-final {
+  background-image: url("Banners/images/background728x90.jpg?2020");
+  position: absolute;
+  left: 728px;
+  width: 728px;
+  height: 90px;
+  border: 0;
+}
+
+
+#pace-logo {
+    position: absolute; 
+    left: 20px;
+    top: 15px;
+  }
+
+#button {
+  position: absolute; 
+  right: 20px;
+  bottom: 30px;
+}
+
+#driven-quote-box {
+  position: absolute; 
+  bottom: 7px;
+  right: 220px;
+  }
+
+#panel1 {
+  font-size: 22px;
+  font-weight: bold;
+  background-image: url("Banners/images/background728x90.jpg?2020");
+  position: absolute;
+  width:728px;
+  height: 90px;
+  border: 0;
+}
+
+#panel2 {
+  position: absolute; 
+  top:  -32px;
+  right: -22px;
+}
+
+#panel-bus {
+position: absolute; 
+top:  -6.98px;
+right: -5px;
+z-index: 2;
+}
+
+#quote1 {
+  position: absolute;
+  right: 1090px;
+  width: 190px;
+  top: -5px;
+}
+
+#quote2 {
+  position: absolute;
+  right: 1090px;
+  width: 190px;
+  top: -5px;
+}
+</style>
+
+</head>
+
+<body>
+
+           <!-- JavaScript clickTag -->  
+           <a href="javascript:window.open(window.clickTag)">
+                <div id="banner">
+                            <div class="panel">
+                                <div id="wrapper">
+                                <div id="panel1" >
+                                <div id="quote1">
+                                <img src="Banners/images/720x90-1A.png?0202" alt="driving you to next-level savings"/>
+                                </div>
+                                <div id="quote2">
+                                <img src="Banners/images/720x90-2A.png?0202" alt="with 2 dollar rides each way"/>
+                                </div>
+                                <div id="panel2"> 
+                                <img src="Banners/images/circle-character728x90.png?0202" id="circle-photo" alt="circle-photo"/>
+                                </div> 
+                                <div id="panel-bus"> 
+                                    <img src="Banners/images/bus-circle728x90.png?0202" id="bus-circle" alt="bus"/>
+                                    </div> 
+                                </div>
+                                <div id="panel-final">
+                                    <img src="Banners/images/pace-logo.png?0202" id="pace-logo" alt="pace logo" />
+                                <div id="driven-quote-box"><img src="Banners/images/720x90-3B.png?0202" alt="we're driven for you"/></div>
+                                <div id="button">
+                                  <img src="Banners/images/lets-ride-btn.png?0202" id="lets-ride-btn" alt="Let's Ride" />
+                                </div>
+                                </div>
+                                </div>
+              </a>
+              <!-- JavaScript clickTag End -->
+        
+
+        
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/CSSRulePlugin.min.js"></script>
+            
+
+           <!-- Banner Animation Begin -->
+           <script>     
+                tl = new TimelineLite();
+                tl.from("#circle-photo", .4, {scale:.1}, {scale:1, ease:Linear.easeNone}),
+                tl.staggerTo("#quote1", .4, {ease:Linear.easeOut, x: 565})
+                tl.staggerTo("#quote1", .4, {delay: 1.9, ease:Linear.easeOut, opacity:0, x:-200})
+                tl.to("#circle-photo", .4, {scale:0}, 4)
+                tl.to("#bus-circle", .4, {delay: 1, scale:0}, 0.1)
+                tl.staggerTo("#quote2", .4, {ease:Linear.easeOut, x: 575})
+                tl.from("#bus-circle", .4, {delay: 4, scale:0}, {scale:1, ease:Linear.easeNone})
+                var $quote2 = document.getElementById("quote2");
+                var $panelbus = document.getElementById("panel-bus");
+                tl.to([$quote2, $panelbus], .2, {delay: 1.9, opacity: 0});
+                tl.to("#panel-final", .4, {ease: Linear.easeNone, x:-728})
+                </script>
+           <!-- End -->
+            
+    </body>
+    
+    </html>

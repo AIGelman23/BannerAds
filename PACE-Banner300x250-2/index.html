@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="ad.size" content="width=300,height=250"> <!-- Meta Name for Google Ad Manager -->
+    <!-- JavaScript clickTag Destination -->
+    <script type="text/javascript"> 
+      var clickTag = "https://mypace.pacebus.com/"; 
+    </script>
+    <!-- End -->
+
+<!-- Banner Styles Begin -->
+  
+<style>
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: #FFF;
+}
+  #banner {
+    position:relative;
+    width:300px;
+    height:250px;
+    background:white;
+    overflow: hidden;
+  }
+  
+  .panel {
+    position:absolute;
+    width:300px;
+    height:250px;
+    overflow: hidden;
+  }
+  
+  #panel-final {
+    background-image: url("Banners/images/background.jpg?3232");
+    position: absolute;
+    left: 350px;
+    width: 350px;
+    height:250px;
+    border: 0;
+  }
+  
+  #pace-logo {
+    position: absolute; 
+    right: 100px;
+    top: 50px;
+  }
+  
+  #button {
+    position: absolute; 
+    right: 100px;
+    bottom: 55px;
+  }
+  
+  #drivenquote {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 1.65;
+    letter-spacing: -0.92px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  #driven-quote-box {
+    position: absolute; 
+    bottom: 112px;
+    right: 66px;
+  }
+  
+  #panel1 {
+    font-size: 22px;
+    font-weight: bold;
+    background-image: url("Banners/images/background.jpg?3232");
+    position: absolute;
+    
+    width:350px;
+    height:250px;
+    border: 0;
+  }
+  
+  #panel {
+    font-size: 22px;
+    font-weight: bold;
+   
+    position: absolute;
+   
+    width:350px;
+    height:250px;
+    border: 0;
+  }
+  
+  #panel2 {
+    position: absolute; 
+    top: 64px;
+    right: 50px;
+  }
+  
+  #panel-bus {
+  position: absolute; 
+  top: 70px;
+  right: 25px;
+  }
+  
+  #quote1 {
+    position: absolute;
+    right: 350px;
+    top: 25px;
+  }
+  
+  #quote2 {
+    position: absolute;
+    right: 400px;
+    top: 25px;
+  }
+  
+  
+  #title-part-two {
+    color: #00a4e2;
+  }
+     
+  </style>
+
+
+<!-- Banner Styles End -->
+
+    </head>
+
+    <body>
+
+        <!-- JavaScript clickTag -->  
+        <a href="javascript:window.open(window.clickTag)">
+            <div id="banner">
+                        <div class="panel">
+                         
+                            <div id="wrapper">
+                            <div id="panel1" >
+                            <div id="quote1">
+                            <img src="Banners/images/banner2textframe1.png?3232" alt="savings" />
+                            </div>
+                            <div id="quote2">
+                            <img src="Banners/images/banner2textframe2.png?3232" alt="ride" />
+                            </div>
+                            <div id="panel2"> 
+                            <img src="Banners/images/circle-character300x250.png?3232" id="circle-character" alt="circle-photo" />
+                            </div> 
+                            <div id="panel-bus"> 
+                            <img src="Banners/images/bus-circle.png?3232" id="bus-circle" alt="bus" />
+                            </div> 
+                           
+                            </div>
+                            <div id="panel-final">
+                                <img src="Banners/images/pace-logo.png?3232" id="pace-logo" alt="pace logo" />
+                            <div id="driven-quote-box"><img src="Banners/images/finale-frame-text.png?3232" alt="driven"/></div>
+                            <div id="button">
+                              <img src="Banners/images/lets-ride-btn.png?3232" id="lets-ride-btn" alt="Let's Ride" />
+                            </div>
+                            </div>
+                            </div>
+          </a>
+          <!-- JavaScript clickTag End -->
+
+       
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/CSSRulePlugin.min.js"></script>
+
+        <!-- Banner Animation Begin -->
+        <script>     
+          tl = new TimelineLite();
+          tl.from("#circle-character", .4, {scale:.1}, {scale:1, ease:Linear.easeNone}),
+          tl.staggerTo("#quote1", .4, {ease:Linear.easeOut, x: 200})
+          tl.staggerTo("#quote1", .4, {delay: 1.9, ease:Linear.easeOut, opacity:0, x:-190})
+          tl.to("#circle-character", .4, {scale:0}, 4)
+          tl.to("#bus-circle", .4, {delay: 1, scale:0}, 0.1)
+          tl.staggerTo("#quote2", .4, {ease:Linear.easeOut, x: 240})
+          tl.from("#bus-circle", .4, {delay: 4, scale:0}, {scale:1, ease:Linear.easeNone})
+          var $quote2 = document.getElementById("quote2");
+          var $panelbus = document.getElementById("panel-bus");
+          tl.to([$quote2, $panelbus], .2, {delay: 1.9, opacity: 0});
+          tl.to("#panel-final", .4, {ease: Linear.easeNone, x:-375})
+
+        
+         
+          </script>
+        <!-- End -->
+  
+    </body>
+  
+</html>
